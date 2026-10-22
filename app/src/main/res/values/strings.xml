@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quick Tiles</string>
+
+    <!-- Tile labels -->
+    <string name="tile_media_up">Media +</string>
+    <string name="tile_media_down">Media −</string>
+    <string name="tile_ring_up">Ringtone +</string>
+    <string name="tile_ring_down">Ringtone −</string>
+    <string name="tile_notif_up">Notif +</string>
+    <string name="tile_notif_down">Notif −</string>
+    <string name="tile_alarm_up">Alarm +</string>
+    <string name="tile_alarm_down">Alarm −</string>
+    <string name="tile_call_up">Call +</string>
+    <string name="tile_call_down">Call −</string>
+
+    <!-- Toasts -->
+    <string name="dnd_access_needed">Grant Do Not Disturb access in the Quick Tiles app to change this volume</string>
+
+    <!-- Main screen -->
+    <string name="main_intro">Adds 10 Quick Settings tiles: volume up and volume down for Media, Ringtone, Notification, Alarm and Call.</string>
+    <string name="main_step_add">1. Swipe down twice to open Quick Settings, tap the edit (pencil) button and drag the Quick Tiles tiles into your panel.</string>
+    <string name="main_step_dnd">2. Ringtone and Notification tiles need Do Not Disturb access to lower the volume to vibrate or silent.</string>
+    <string name="status_dnd_on">Do Not Disturb access: granted</string>
+    <string name="status_dnd_off">Do Not Disturb access: not granted</string>
+    <string name="btn_dnd">Open Do Not Disturb access</string>
+</resources>
