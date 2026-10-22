@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Lets the app appear in "Do Not Disturb access" so ringtone/notification
+         volume can be lowered to silent/vibrate. -->
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Material.Light.DarkActionBar">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Used by the Power tile to open the system power menu. -->
+        <service
+            android:name=".PowerAccessibilityService"
+            android:exported="true"
+            android:label="@string/accessibility_service_label"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+
+        <!-- 1. Power -->
+        <service
+            android:name=".tiles.PowerTile"
+            android:exported="true"
+            android:icon="@drawable/ic_power"
+            android:label="@string/tile_power"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <!-- 2-3. Media -->
+        <service
+            android:name=".tiles.MediaUpTile"
+            android:exported="true"
+            android:icon="@drawable/ic_volume_up"
+            android:label="@string/tile_media_up"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".tiles.MediaDownTile"
+            android:exported="true"
+            android:icon="@drawable/ic_volume_down"
+            android:label="@string/tile_media_down"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <!-- 4-5. Ringtone -->
+        <service
+            android:name=".tiles.RingUpTile"
+            android:exported="true"
+            android:icon="@drawable/ic_volume_up"
+            android:label="@string/tile_ring_up"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".tiles.RingDownTile"
+            android:exported="true"
+            android:icon="@drawable/ic_volume_down"
+            android:label="@string/tile_ring_down"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <!-- 6-7. Notification -->
+        <service
+            android:name=".tiles.NotificationUpTile"
+            android:exported="true"
+            android:icon="@drawable/ic_volume_up"
+            android:label="@string/tile_notif_up"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".tiles.NotificationDownTile"
+            android:exported="true"
+            android:icon="@drawable/ic_volume_down"
+            android:label="@string/tile_notif_down"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <!-- 8-9. Alarm -->
+        <service
+            android:name=".tiles.AlarmUpTile"
+            android:exported="true"
+            android:icon="@drawable/ic_volume_up"
+            android:label="@string/tile_alarm_up"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".tiles.AlarmDownTile"
+            android:exported="true"
+            android:icon="@drawable/ic_volume_down"
+            android:label="@string/tile_alarm_down"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <!-- 10-11. Calls -->
+        <service
+            android:name=".tiles.CallUpTile"
+            android:exported="true"
+            android:icon="@drawable/ic_volume_up"
+            android:label="@string/tile_call_up"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".tiles.CallDownTile"
+            android:exported="true"
+            android:icon="@drawable/ic_volume_down"
+            android:label="@string/tile_call_down"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+    </application>
+</manifest>

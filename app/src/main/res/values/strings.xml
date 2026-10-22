@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quick Tiles</string>
+
+    <!-- Tile labels -->
+    <string name="tile_power">Power</string>
+    <string name="tile_media_up">Media +</string>
+    <string name="tile_media_down">Media −</string>
+    <string name="tile_ring_up">Ringtone +</string>
+    <string name="tile_ring_down">Ringtone −</string>
+    <string name="tile_notif_up">Notif +</string>
+    <string name="tile_notif_down">Notif −</string>
+    <string name="tile_alarm_up">Alarm +</string>
+    <string name="tile_alarm_down">Alarm −</string>
+    <string name="tile_call_up">Call +</string>
+    <string name="tile_call_down">Call −</string>
+    <string name="tile_needs_setup">Setup needed</string>
+
+    <!-- Toasts -->
+    <string name="enable_accessibility_first">Enable the Quick Tiles accessibility service first</string>
+    <string name="dnd_access_needed">Grant Do Not Disturb access in the Quick Tiles app to change this volume</string>
+
+    <!-- Accessibility service -->
+    <string name="accessibility_service_label">Quick Tiles power menu</string>
+    <string name="accessibility_service_description">Lets the Power tile open the system power menu. It does not read your screen or collect any data.</string>
+
+    <!-- Main screen -->
+    <string name="main_intro">Adds 11 Quick Settings tiles: Power, plus volume up and volume down for Media, Ringtone, Notification, Alarm and Call.</string>
+    <string name="main_step_add">1. Swipe down twice to open Quick Settings, tap the edit (pencil) button and drag the Quick Tiles tiles into your panel.</string>
+    <string name="main_step_access">2. The Power tile needs the accessibility service. It only opens the system power menu.</string>
+    <string name="main_step_dnd">3. Ringtone and Notification tiles need Do Not Disturb access to lower the volume to vibrate or silent.</string>
+    <string name="status_access_on">Accessibility service: enabled</string>
+    <string name="status_access_off">Accessibility service: not enabled</string>
+    <string name="status_dnd_on">Do Not Disturb access: granted</string>
+    <string name="status_dnd_off">Do Not Disturb access: not granted</string>
+    <string name="btn_accessibility">Open accessibility settings</string>
+    <string name="btn_dnd">Open Do Not Disturb access</string>
+    <string name="btn_appinfo">Open app info</string>
+    <string name="note_restricted">If the accessibility switch is greyed out (Android 13 and newer, sideloaded APK), open App info, tap the three-dot menu, choose Allow restricted settings, then try again.</string>
+</resources>
